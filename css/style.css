@@ -1,0 +1,125 @@
+/*  ---Custom Css----*/
+
+		/*common*/
+		.btn {
+			padding: 4px 6px;
+		}
+
+
+		/*Large Devices*/
+
+		#headfb {
+			margin-top: 40px;
+			color: #0e385f;
+    		font-size: 20px;
+    		font-weight: bold;
+    		line-height: 29px;
+    		word-spacing: -1px;
+		}
+		#headfb2 {
+			font-size: 36px;
+			color: #333;
+    		font-weight: bold;
+    		line-height: 1.34;
+		}
+		#headfb3 {
+			color: #1d2129;
+			font-size: 19px
+		}
+		.content {
+			background: linear-gradient(white, #D3D8E8); 
+			height: 800px;
+			/*width: 100%;*/
+		}
+		.pad {
+			padding: 0;
+		}
+		.form-firt {
+			display: inline-block;
+		}
+		.input-form {
+			width: 80%;
+			margin: 2% 0;
+		}
+		.header-nav {
+			background-color: #4867aa;
+			height: 86px;
+		}
+		.lbl label {
+			font-weight: normal;
+			color: white;
+		}
+		.top {
+			padding-bottom: 18px;
+		}
+		
+		.frg a{
+			color: #9cb4d8;
+			font-weight: normal;
+		    text-decoration: none;
+		    padding-top: 6px;
+		    font-family: Arial;
+		    font-size: 13px;
+		}
+		.left-panel {
+			padding-left: 10%;
+		}
+		.fir-last {
+			max-width: 190px;
+		}
+		.frg a:hover {
+			text-decoration: underline;
+		}
+		.login-btn {
+			margin-top: 24px;
+		}
+
+		#username-error {
+			position: absolute;
+			color: black;
+		}
+		#password-error {
+			position: absolute;
+			color: black;	
+		}
+
+		/*Small Devices*/
+		
+		
+		
+		.bck {
+			padding-top: 18%;
+			background-color: #eceff5;
+		}
+		.form-xs input {
+			padding: 4%;
+			font-size: 16px;
+		}
+		.btn-xs {
+			width: 100%;
+			/*padding: 12px 0px;*/
+		}
+		.btn-xs-2 {
+			width: 75%;
+			min-width: 152px;
+			margin-left: 10%;
+		}
+		
+		.btn-last {
+			padding: 0;
+		}
+		.text-centre {
+			margin-left: 15%;
+			min-width: 210px;
+			font-size: 12px;
+		}
+		.text-centre .second {
+			padding-left: 5px;
+
+		}
+	
+		@media screen and (max-width: 768px){
+			.header-nav {
+				height: 40px;
+			}
+		}
