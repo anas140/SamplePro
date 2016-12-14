@@ -25,7 +25,7 @@ $(document).ready(function() {
 	
 	$("#bt-up").click(function() {
 			// var flag = true;
-			var firstName = $("#first-name").val();
+			/*var firstName = $("#first-name").val();
 			var secondName = $("#second-name").val();
 			var moboremail = $("#mob-email").val();
 			var moboremail2 = $("#mob-email2").val();
@@ -58,7 +58,7 @@ $(document).ready(function() {
 			 		// return true;
 
 			 	}
-			}
+			} */
 			 	//else if (!(/^[a-zA-Z]+$/.test(firstName))) {
 			// 		//some code here
 			// 	} else {
@@ -75,7 +75,17 @@ $(document).ready(function() {
 
 			// 	if (true) {}
 			// }
-			return flag;
+			// return flag;
+	var gender = $('gender').val();
+    if ($("gender:checked").length > 1 || $("gender:checked").length == 0){
+    // $('#dis').slideDown().html('<span id="error">Please choose a gender</span>');
+      console.log("error")
+      // return true;
+    }
+    else{
+      console.log(gender)
+    }
+    return false;
 
 	});
 	
@@ -89,3 +99,7 @@ $(document).ready(function() {
 });
 
 // }
+
+
+
+
