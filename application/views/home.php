@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/bootstrap.css'?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/style.css'?>">
 	  
-	<script type="text/javascript" src="<?php echo base_url().'js/script.js'?>"></script>
+	<!-- <script type="text/javascript" src="<?php //echo base_url().'js/script.js'?>"></script>-->
 	<title></title>
 </head>
 <body>
@@ -23,20 +23,20 @@
 						<img src="<?php echo base_url().'images/fblogo.png'?>">
 					</div>
 					<div class="col-md-offset-7 hidden-xs">
-						<form class="form-inline lbl">
+						<form class="form-inline lbl" method="POST" action="<?php echo base_url().'/index.php/logind/authUser'?>">
 							<div class="form-group top">
 								<label>Email or Phone</label><br>
-								<input type="text" name="" id="username">
+								<input type="text" name="username" id="username">
 								<label id="username-error"></label>
 							</div>
 							<div class="form-group frg">
 								<label>Password</label><br>
-								<input type="Password" name="" id="password"><br>
+								<input type="Password" name="password" id="password"><br>
 								<a href="#" class="">forgotten password?</a>
 								<label id="password-error"></label>
 							</div>
 							<div class="form-group top">
-								<input type="button" class="btn btn-xs btn-primary login-btn" value="Login" id="bt-log">
+								<input type="submit" class="btn btn-xs btn-primary login-btn" value="Login" id="bt-log">
 							</div>
 						</form>
 					</div>
@@ -75,8 +75,8 @@
 										</select><br>
 										</div>
 									</div>
-									<input type="radio" name="sex" class="" value="male">Male
-									<input type="radio" name="sex" class="" value="female">Female<br>
+									<input type="radio" name="gender" class="" value="male" id="gm">Male
+									<input type="radio" name="gender" class="" value="female" id="gf">Female<br>
 									<input type="submit" name="" class="btn btn-success" value="Create an account" id="bt-up">
 								</div>
 							</form>
