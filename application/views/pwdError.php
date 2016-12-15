@@ -29,10 +29,12 @@
 				/*border-radius: 5px;*/
 			}
 			.form {
+			    float: none;
+    			margin: 0 auto;
 				margin-top: 6%; 
 				background-color: white;
 				height: 60%;
-				/*width: 40%;*/
+				width: 40%;
 				/*width: 400px;*/
 				border: 2px solid;
     			border-color: #e5e6e9 #dfe0e4 #d0d1d5;
@@ -41,10 +43,26 @@
 			.flh {
 				color: blue;
 			}
+			.hr {
+			     margin-top: 0; 
+    `			border: 0;
+    			border-top: 1px solid gray;
+			}
+			.lftmrg{
+				margin-left: 25%;
+			}
+			.equal {
+				width: 0;
+			}
 		</style>
 	  
 	</head>
 	<body>
+	<?php 
+		foreach ($data as $value) {
+			# code...
+		
+	?>
 		<div class="container-fluid">
 			<div class="row header">
 				<div class="col-md-offset-2 logo">
@@ -56,11 +74,54 @@
 				<div class="col-md-2 col-md-offset-5 form">
 					<div class="row">
 						<div class="col-md-12">
-							<h4 class="flh">Facebook Login</h4>
+							<h4 class="flh">Facebook Login</h4><hr class="hr">
 						</div>
 					</div>
+					
+						<div class="row">
+							<div class="col-md-12">
+								<form class="form-vertical">
+									<div class="form-group lftmrg">
+											<div class="row">
+												<div class="col-md-3 ">
+												<label>Login as</label>
+												</div>
+												<div class="col-md-3">
+												<img src="<?php echo $value['vchr_prof_pic']; ?>" style="width: 50px;">
+												<br>
+												<a href="#">Not haris?</a>
+												</div>
+												
+												<div class="col-md-3 ">
+												<label><?php echo $value['vchr_first_name']; ?></label>
+												<?php echo $value['vchr_user_name']; ?>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-3">
+													<label>Password</label>
+												</div>
+												<div class="col-md-9">
+													<input type="text" name="">
+													<br>
+													<input type="checkbox" name="">Keep me logged in<br>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-offset-3 colmd-9" >
+													<br><input type="submit" name="" class="btn btn-primary btn-sm"> or <a href="#">Signup for Facebook</a><br><br>
+													<a href="#">Forgotten Password</a>
+												</div>
+											</div>
+										
+										
+									</div>
+								</form>
+							</div>
+						</div>
 				</div>
 			</div>
 		</div>
+		<?php } ?>
 	</body>
 </html>
