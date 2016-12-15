@@ -22,6 +22,7 @@
 		
 		
 		$json=json_decode($result,true); //web service returns a json data, convert it to php array using json_decode
+		// print_r($json);
 		$result1['data']=$json;
 		foreach ($json as $val) {
 			/*Responsecode=200 means login successfull
