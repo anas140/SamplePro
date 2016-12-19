@@ -8,9 +8,10 @@
 	<!-- <script type="text/javascript" src="<?php //echo base_url().'js/jquery.min.js'?>"></script>
 	<script type="text/javascript" src="<?php //echo base_url().'js/bootstrap.js'?>"></script>
 	<link rel="stylesheet" type="text/css" href="<?php //echo base_url().'css/bootstrap.css'?>"> -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/bootstrap.min.css'?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/style.css'?>">
 	<style type="text/css">
 		.container-fluid {
@@ -48,13 +49,15 @@
 		.cbody {
 			background-color: white;
 			padding-left: 2%;
+			border: 1px solid #CCD1D1;
+    		border-radius: 7px;
 		}
 		.brdr-r {
-			border-right: 1px solid grey;
+			border-right: 1px solid #CCD1D1;
 			padding-left: 10%;
 		}
 		.brdr-b {
-			border-bottom: 1px solid grey;
+			border-bottom: 1px solid #CCD1D1;
 			padding: 2% 0;
 		}
 		.pbody {
@@ -76,7 +79,7 @@
 		.lcol {
 			background-color: white;
     		height: 400px;
-    		width: 32.33%;
+    		/*width: 32.33%;*/
     		margin-left: 9px;
     		/*padding-right: 31%;*/
 		}
@@ -93,7 +96,7 @@
 				<form class="form-horizontal" role="form">
 					<div class="form-group mgn-non">
 						<!-- <i class="glyphicon glyphicon-search"></i> -->
-						<input type="text" name="" class="form-control" placeholder="Search..">
+						<input type="text" name="" class="form-control" placeholder="Search Facebook">
 						<i class="glyphicon glyphicon-search form-control-feedback"></i>
 					</div>
 				</form>
@@ -101,7 +104,7 @@
 			<div class="col-md-4 col-md-offset-2" style="    margin-top: 8px;
     color: white;">
 				<img src="<?php echo $value['vchr_prof_pic']; ?>" style="width: 6%; height: 20px;">
-				<i><?php echo $value['vchr_first_name']; ?></i>
+				<span><?php echo $value['vchr_first_name']; ?></span>
 			</div>
 		</div>
 		<!-- <div class="container-fluid"> -->
@@ -110,7 +113,7 @@
 				<div class="row">
 					<div class="col-md-offset-2 col-md-10">
 						<a href="#" style="color: black;"><img src="<?php echo $value['vchr_prof_pic'] ?>" style=" height: 20px;">
-						<?php echo $value['vchr_first_name']; ?></a>
+						<spn><?php echo $value['vchr_first_name']; ?></spn></a>
 					</div>
 				</div>
 				<div class="row">
@@ -131,12 +134,12 @@
 							</div>
 							
 							<div class="col-md-4">
-								<a href="#"><span class="glyphicon glyphicon-picture"></span> Add photos/video
+								<a href="#"><span class="glyphicon glyphicon-picture text-warning"></span> Add photos/video
 								</a>
 								<span class="brdr-r"></span>
 							</div>
 							<div class="col-md-4">
-								<a href="#"><i class="glyphicon glyphicon-list-alt"></i> Write note</a>
+								<a href="#"><i class="glyphicon glyphicon-list-alt text-success"></i> Write note</a>
 							</div>
 						</div>
 						<div class="row pbody">
@@ -153,7 +156,7 @@
 			</div>	
 			
 
-			<div class="col-md-4 col3 lcol">
+			<div class="col-md-2 col3 lcol cbody">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="row">
