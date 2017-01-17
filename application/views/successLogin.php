@@ -5,11 +5,11 @@
 	<?php $this->load->helper('url'); ?>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <script type="text/javascript" src="<?php //echo base_url().'js/jquery.min.js'?>"></script>
-	<script type="text/javascript" src="<?php //echo base_url().'js/bootstrap.js'?>"></script>
+	<script type="text/javascript" src="<?php echo base_url().'js/jquery.min.js'?>"></script>
+	<!--<script type="text/javascript" src="<?php //echo base_url().'js/bootstrap.js'?>"></script>
 	<link rel="stylesheet" type="text/css" href="<?php //echo base_url().'css/bootstrap.css'?>"> -->
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/bootstrap.min.css'?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'css/style.css'?>">
@@ -78,7 +78,7 @@
 		}
 		.lcol {
 			background-color: white;
-    		height: 400px;
+    		height: 482px;
     		/*width: 32.33%;*/
     		margin-left: 9px;
     		/*padding-right: 31%;*/
@@ -87,9 +87,12 @@
 </head>
 <body>
 	<?php 
-		foreach ($data as $value) {
-			# code...
-		?>
+		 // foreach ($data[0][0] as $value) {
+			// ;
+			// echo $value;
+		?> 
+
+
 	<div class="container-fluid">
 		<div class="row sheader">
 			<div class="col-md-4 col-md-offset-2 input-box">
@@ -103,8 +106,8 @@
 			</div>
 			<div class="col-md-4 col-md-offset-2" style="    margin-top: 8px;
     color: white;">
-				<img src="<?php echo $value['vchr_prof_pic']; ?>" style="width: 6%; height: 20px;">
-				<span><?php echo $value['vchr_first_name']; ?></span>
+				<img src="<?php echo $data[0][0]['prof_pic']; ?>" style="width: 6%; height: 20px;">
+				<span><?php echo $data[0][0]['chr_firstname']; ?></span>
 			</div>
 		</div>
 		<!-- <div class="container-fluid"> -->
@@ -112,8 +115,8 @@
 			<div class="col-md-2 col3">
 				<div class="row">
 					<div class="col-md-offset-2 col-md-10">
-						<a href="#" style="color: black;"><img src="<?php echo $value['vchr_prof_pic'] ?>" style=" height: 20px;">
-						<spn><?php echo $value['vchr_first_name']; ?></spn></a>
+						<a href="#" style="color: black;"><img src="<?php echo $data[0][0]['prof_pic'] ?>" style=" height: 20px;">
+						<spn><?php echo $data[0][0]['chr_firstname']; ?></spn></a>
 					</div>
 				</div>
 				<div class="row">
@@ -144,8 +147,8 @@
 						</div>
 						<div class="row pbody">
 							<div col-md-offset-1 col-md-11>
-								<span style><img src="<?php echo $value['vchr_prof_pic']; ?>" style="width: 50px; height: 50px;"></span>
-								<input type="text" name="" class="form-control wym" placeholder="Whats on your mind">
+								<span style><img src="<?php echo $data[0][0]['prof_pic']; ?>" style="width: 50px; height: 50px;"></span>
+								<input type="textarea" name="" class="form-control wym" placeholder="Whats on your mind">
 							</div>
 						</div>
 					</div>
@@ -171,6 +174,6 @@
 		<!-- </div> -->
 		
 	</div>
-	<?php  } ?>
+	 <?php  //} ?>
 </body>
 </html>

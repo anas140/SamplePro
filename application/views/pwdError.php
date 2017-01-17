@@ -23,8 +23,8 @@
 			}
 			.perbody {
 				background-color: #e9ebee;
-				width: 100%;
-				height: 100%;
+				/*width: 100%;*/
+				/*height: 100%;*/
 				margin: 0;
 				/*border-radius: 5px;*/
 			}
@@ -33,7 +33,7 @@
     			margin: 0 auto;
 				margin-top: 6%; 
 				background-color: white;
-				height: 60%;
+				/*height: 60%;*/
 				width: 40%;
 				/*width: 400px;*/
 				border: 2px solid;
@@ -58,11 +58,6 @@
 	  
 	</head>
 	<body>
-	<?php 
-		foreach ($data as $value) {
-			# code...
-		
-	?>
 		<div class="container-fluid">
 			<div class="row header">
 				<div class="col-md-offset-2 logo">
@@ -71,7 +66,7 @@
 				</div>
 			</div>	
 			<div class="row perbody">
-				<div class="col-md-2 col-md-offset-5 form">
+				<div class="col-md-2 col-md-offset-5 col-sm-8 col-xs-12 form">
 					<div class="row">
 						<div class="col-md-12">
 							<h4 class="flh">Facebook Login</h4><hr class="hr">
@@ -80,21 +75,22 @@
 					
 						<div class="row">
 							<div class="col-md-12">
-								<form class="form-vertical">
+								<form class="form-vertical" method="POST" action="<?php echo base_url().'/index.php/logind/authUser' ?>">
 									<div class="form-group lftmrg">
 											<div class="row">
 												<div class="col-md-3 ">
 												<label>Login as</label>
 												</div>
 												<div class="col-md-3">
-												<img src="<?php echo $value['vchr_prof_pic']; ?>" style="width: 50px;">
+												<img src="<?php echo $data[0][0]['prof_pic']; ?>" style="width: 50px;">
 												<br>
-												<a href="#">Not haris?</a>
+												<a href="#">Not <?php echo $data[0][0]['chr_firstname']; ?></a>
 												</div>
 												
 												<div class="col-md-3 ">
-												<label><?php echo $value['vchr_first_name']; ?></label>
-												<?php echo $value['vchr_user_name']; ?>
+												<label><?php echo $data[0][0]['chr_firstname']; ?></label>
+												<!-- <?php //echo $data[0][0]['vchr_user_name']; ?> -->
+												<input type="hidden" name="username" value="<?php echo  $data[0][0]['vchr_email']; ?>">
 												</div>
 											</div>
 											<div class="row">
@@ -102,7 +98,7 @@
 													<label>Password</label>
 												</div>
 												<div class="col-md-9">
-													<input type="text" name="">
+													<input type="Password" name="password">
 													<br>
 													<input type="checkbox" name="">Keep me logged in<br>
 												</div>
@@ -122,6 +118,6 @@
 				</div>
 			</div>
 		</div>
-		<?php } ?>
+		
 	</body>
 </html>

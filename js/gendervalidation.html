@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<title></title>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		$('#btup').click(function() { 
+		var gender = $('gender').val();
+    if ($("gender:checked").length > 1 || $("gender:checked").length == 0){
+    alert("please select a gender");
+      console.log("error")
+    }
+    else{
+      console.log(gender)
+    }
+    return false;
+	});
+	});
+	</script>
+</head>
+<body>
+<form>
+	<input type="radio" name="gender" value="male">male
+	<input type="radio" name="gender" value="female">female
+	<input type="button" name="" id="btup" value="register">
+</form>
+
+</body>
+</html>

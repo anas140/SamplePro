@@ -12,6 +12,11 @@
 	  
 	<!-- <script type="text/javascript" src="<?php //echo base_url().'js/script.js'?>"></script>-->
 	<title></title>
+	<style type="text/css">
+		.mgnz {
+			margin-left: 0;
+		}
+	</style>
 </head>
 <body>
 		<div class="container-fluid pad">
@@ -22,8 +27,8 @@
 					<div class="col-md-offset-3 col-xs-offset-3 col-md-3">
 						<img src="<?php echo base_url().'images/fblogo.png'?>">
 					</div>
-					<div class="col-md-offset-7 hidden-xs">
-						<form class="form-inline lbl" method="POST" action="<?php echo base_url().'/index.php/logind/authUser'?>">
+					<div class="col-md-offset-7 hidden-xs mgnz">
+						<form class="form-inline lbl" method="POST" action="<?php echo base_url().'/index.php/Logind/authUser'?>">
 							<div class="form-group top">
 								<label>Email or Phone</label><br>
 								<input type="text" name="username" id="username">
@@ -89,10 +94,10 @@
 			<div class="row ">
 				<div class="col-xs-12 col-sm-12 hidden-md hidden-lg bck">
 					<div class="container">
-						<form role="form" class="form-inline form-xs">
+						<form role="form" class="form-inline form-xs" method="POST" action="<?php echo base_url().'/index.php/logind/authUser' ?>">
 							<div class="form-group">
-								<input type="text" name="" class="form-control" placeholder="Email address or phone number">
-								<input type="password" name="" class="form-control" placeholder="Password">
+								<input type="text" name="username" class="form-control" placeholder="Email address or phone number">
+								<input type="password" name="password" class="form-control" placeholder="Password">
 							</div>
 							<div class="form-group btn-last">
 								<input type="submit" class="btn btn-primary btn-xs" style="padding: 4px 0px;" value="Login">

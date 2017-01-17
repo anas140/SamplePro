@@ -58,11 +58,6 @@
 	  
 	</head>
 	<body>
-	<?php 
-		foreach ($data as $value) {
-			# code...
-		
-	?>
 		<div class="container-fluid">
 			<div class="row header">
 				<div class="col-md-offset-2 logo">
@@ -80,14 +75,14 @@
 					
 						<div class="row">
 							<div class="col-md-12">
-								<form class="form-vertical">
+								<form class="form-vertical" method="POST" action="<?php echo base_url().'/index.php/logind/authUser' ?>">
 									<div class="form-group lftmrg">
 											<div class="row">
 												<div class="col-md-3 ">
 												<label>Login</label>
 												</div>
 												<div class="col-md-9">
-													<input type="text" name="">
+													<input type="text" name="username">
 												</div>
 											</div>
 											<br>
@@ -96,7 +91,7 @@
 													<label>Password</label>
 												</div>
 												<div class="col-md-9">
-													<input type="Password" name="">
+													<input type="Password" name="password">
 													<br>
 													<input type="checkbox" name="">Keep me logged in<br>
 												</div>
@@ -116,6 +111,5 @@
 				</div>
 			</div>
 		</div>
-		<?php } ?>
 	</body>
 </html>
